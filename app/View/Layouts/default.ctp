@@ -28,11 +28,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		//echo $this->Html->css('cake.generic');
+                echo $this->Html->css('bootflat.min');
+                echo $this->Html->css('bootstrap.min');
+                echo $this->Html->css('index');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+                
 	?>
 </head>
 <body>
@@ -58,6 +62,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</p>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php echo $this->element('sql_dump'); 
+        echo $this->Html->script('bootstrap.min');
+        echo $this->Html->script('jquery-1.11.2.min');
+        ?>
 </body>
 </html>
